@@ -4,7 +4,7 @@ import {Device} from "../Layout/responsive/Devices";
 export const HeaderContainer = styled.header`
   background-color: #f2f2f2;
   height: 70px;
-  width: 100%;
+  width: 100vw;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   display: grid;
   grid-auto-rows: 70px;

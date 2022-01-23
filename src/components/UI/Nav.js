@@ -11,7 +11,4 @@ export const Nav =styled.nav`
   a{
     text-decoration: none;
   }
-  svg{
-    height: 30px;
-  }
 `;
