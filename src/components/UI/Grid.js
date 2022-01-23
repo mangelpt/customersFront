@@ -2,10 +2,11 @@ import styled from "styled-components";
 import {Device} from "../Layout/responsive/Devices";
 
 export const Grid = styled.section`
+  background-color: orangered;
   display: grid;
   padding: 5px 30px;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   //TODO: change this
   height: fit-content;
   grid-auto-flow: dense;

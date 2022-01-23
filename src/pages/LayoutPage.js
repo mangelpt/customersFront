@@ -1,12 +1,13 @@
 import React from 'react';
 import { Outlet } from "react-router-dom";
+import Header from "../components/Layout/Header";
 
 const PageLayout = () => {
     return (
-        <div>
-            this is a page layout
+        <>
+          <Header/>
             <Outlet />
-        </div>
+        </>
     );
 };
 

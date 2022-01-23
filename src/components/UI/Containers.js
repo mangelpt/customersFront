@@ -26,8 +26,22 @@ export const LogoContainer = styled.span`
     justify-content: start;
   }
   svg {
-    fill:  #C18C02;
+    fill:#ffff;
     width: 200px;
     height: 70px;
+  }
+`;
+
+
+export const UserImageContainer=styled.span`
+  background-color: #ffff;
+  border-radius: 100%;
+  display: flex;
+  justify-items: center;
+  box-shadow: 10px 10px 43px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  width: auto;
+  svg {
+    height: 80px;
   }
 `;
