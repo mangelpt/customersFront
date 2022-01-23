@@ -28,6 +28,10 @@ export const NormalButton = styled.button`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  &:disabled{
+    background-color:gainsboro;
+    cursor: none;
+  }
   svg {
     width: 20px;
   }
