@@ -3,7 +3,7 @@ import {Grid} from "../components/UI/Grid";
 import UserCard from "../components/Layout/UserCard";
 import {useHTTP} from "../hooks/useFetch";
 import {CUSTOMER_URL} from "../Constants";
-
+import {Spinner} from "../components/UI/Spinner";
 
 const Dashboard = () => {
     const [customers, setCustomers] = useState([]);
@@ -11,31 +11,32 @@ const Dashboard = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const data = await sendRequest({
-                url: CUSTOMER_URL, headers: {
-                    'Content-Type':'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Headers': 'Content-Type'
-                }
-            });
-
+            const data = await sendRequest({url: CUSTOMER_URL});
             setCustomers(data);
         }
         getData().then();
     }, [sendRequest])
 
-    console.log(customers)
+    let allCustomers;
+    if (error !== null) {
+        allCustomers = error
+    } else {
+        allCustomers = customers.map((customer) => {
+            const birthYear = new Date(customer.birthDate).getFullYear();
+            const currentYear = new Date().getFullYear();
+            return <UserCard
+                key={customer.id}
+                id={customer.id}
+                name={customer.name + " " + customer.lastName}
+                age={currentYear - birthYear}>
+            </UserCard>
+        })
+    }
+
     return (
         <>
             <Grid size={300} gap={5} rows='auto'>
-                <UserCard name={"miguel"} age={"23"}>
-                </UserCard>
-                <UserCard name={"miguel"} age={"23"}>
-                </UserCard>
-                <UserCard name={"miguel"} age={"23"}>
-                </UserCard>
-                <UserCard name={"miguel"} age={"23"}>
-                </UserCard>
+                {isLoading ? <Spinner/> : allCustomers}
             </Grid>
         </>
     );
