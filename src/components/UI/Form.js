@@ -10,7 +10,7 @@ export const Form = styled.form`
   align-items: center;
   background-color: #ffff;
   height: 300px;
-  width: 80vw;
+  width: 86%;
   padding: 20px;
   padding-bottom: 5px;
   @media only screen and ${Device.tablet} {
