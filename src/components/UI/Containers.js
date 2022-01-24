@@ -48,7 +48,6 @@ export const UserImageContainer=styled.span`
 
 export const GenericContainer=styled.span`
   display: flex;
-  background-color: orangered;
   width: 30%;
   justify-content: space-around;
 `;
