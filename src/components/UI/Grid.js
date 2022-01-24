@@ -2,11 +2,10 @@ import styled from "styled-components";
 import {Device} from "../Layout/responsive/Devices";
 
 export const Grid = styled.section`
-  background-color: orangered;
   display: grid;
   padding: 5px 30px;
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   height: fit-content;
   grid-auto-flow: dense;
   gap: ${props => props.gap}px;
