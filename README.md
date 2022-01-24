@@ -1,3 +1,13 @@
+# full reponsive react App 
+this app consume an api developed  with  node js 
+# end points 
+all customers: https://api-node-clients.herokuapp.com/customers/ \
+customer detail: https://api-node-clients.herokuapp.com/customers/:id \
+ages average: https://api-node-clients.herokuapp.com/average   \
+add new customer https://api-node-clients.herokuapp.com/add  \
+delete customer https://api-node-clients.herokuapp.com/delete/:id
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
