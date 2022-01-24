@@ -4,7 +4,7 @@ import {Device} from "../Layout/responsive/Devices";
 export const HeaderContainer = styled.header`
   background-color: #f2f2f2;
   height: 70px;
-  width: 100vw;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   display: grid;
   grid-auto-rows: 70px;
@@ -44,4 +44,10 @@ export const UserImageContainer=styled.span`
   svg {
     height: 80px;
   }
+`;
+
+export const GenericContainer=styled.span`
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
 `;

@@ -1,8 +1,8 @@
 import {Card} from "../UI/Card";
 import React from 'react';
-import {UserImageContainer} from "../UI/Containers";
+import {GenericContainer, UserImageContainer} from "../UI/Containers";
 import {BoldLabel, SmallLabel} from "../UI/Labels";
-import {TrashIcon, User} from "../../assets/Icons";
+import {DetailsIcon, TrashIcon, User} from "../../assets/Icons";
 import {CircleButton} from "../UI/Buttons";
 
 const UserCard = ({name, age}) => {
@@ -13,9 +13,14 @@ const UserCard = ({name, age}) => {
             </UserImageContainer>
             <BoldLabel>{name}</BoldLabel>
             <SmallLabel>{age}</SmallLabel>
-            <CircleButton>
-                <TrashIcon/>
-            </CircleButton>
+            <GenericContainer>
+                <CircleButton>
+                    <TrashIcon/>
+                </CircleButton>
+                <CircleButton>
+                    <DetailsIcon/>
+                </CircleButton>
+            </GenericContainer>
         </Card>
     );
 };

@@ -8,9 +8,11 @@ export const CircleButton = styled.button`
   border-radius: 50%;
   border: 1px solid #2f80ed;
   color: #2f80ed;
-
+ display: flex;
+  justify-content: center;
+  align-items: center;
   svg {
-    width: 20px;
+    width: 25px;
   }
 
   &:hover {

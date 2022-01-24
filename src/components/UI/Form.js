@@ -11,6 +11,7 @@ export const Form = styled.form`
   background-color: #ffff;
   height: 300px;
   width: 80vw;
+  padding: 20px;
   padding-bottom: 5px;
   @media only screen and ${Device.tablet} {
     width: 300px;
