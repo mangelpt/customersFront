@@ -19,7 +19,6 @@ const CustomerDetails = () => {
         getData().then();
     }, [customerId, sendRequest])
 
-    console.log(customer)
     return (
         <Grid size={300} gap={5} rows='auto'>
             <CardDetails
